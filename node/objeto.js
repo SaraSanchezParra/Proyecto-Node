@@ -22,8 +22,8 @@ rl.question("¿Cuál es tu nombre? ", (name) => {
           if (err) throw err;
           fs.readFile("objeto.json", (err, data) => {
             if (err) throw err;
-            let newUser = JSON.parse(data);
-            console.log(`Hola ${newUser.name} ${newUser.surname}, tienes ${newUser.age} años.`)
+            let readUser = JSON.parse(data);
+            console.log(`Hola ${readUser.name} ${readUser.surname}, tienes ${readUser.age} años.`)
             rl.close();
           });
         }
