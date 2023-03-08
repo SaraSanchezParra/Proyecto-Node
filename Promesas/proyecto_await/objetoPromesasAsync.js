@@ -35,7 +35,7 @@ async function asyncObject () {
     catch(error){
         console.log(error);
     }
-    
+
 }
 
 asyncObject()
