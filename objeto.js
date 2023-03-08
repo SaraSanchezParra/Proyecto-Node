@@ -15,7 +15,7 @@ const rl = readline.createInterface({ //crea una interfaz de trabajo que nos per
 rl.question("¿Cuál es tu nombre? ", (name) => {
   rl.question("¿Cuál es tu apellido? ", (surname) => {
     rl.question("¿Cuál es tu edad? ", (age) => {
-      let newUser = { name, surname, age };
+      let newUser = { name: name, surname: surname, age: age };
       const jsonString = JSON.stringify(newUser); //lo guardamos en un archivo json
       fs.writeFile( "objeto.json", //la callback está dentro de las llaves. La función asíncrona es la que está antes de las llaves.
         jsonString, (err) => {
@@ -23,7 +23,7 @@ rl.question("¿Cuál es tu nombre? ", (name) => {
           fs.readFile("objeto.json", (err, data) => {
             if (err) throw err;
             let newUser = JSON.parse(data);
-            console.log(`Hola ${name} ${surname}, tienes ${age} años.`)
+            console.log(`Hola ${newUser.name} ${newUser.surname}, tienes ${newUser.age} años.`)
             rl.close();
           });
         }
