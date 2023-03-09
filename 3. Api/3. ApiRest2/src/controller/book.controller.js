@@ -26,8 +26,9 @@ function getBook(request, response) {
     if (book) {
         respuesta = {error: false, codigo: 200, mensaje: "the book has been found", data: book};
         response.send(respuesta);
-    }
+    } else {
         respuesta = { error: true, codigo: 200, mensaje: "The book does not exist", data: []};
+        };
         response.send(respuesta);
 }
 
