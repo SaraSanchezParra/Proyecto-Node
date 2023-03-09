@@ -6,6 +6,7 @@ let book = null;
 
 function getStart(request, response){
     let respuesta = {error: true, codigo: 200, mensaje: 'Beginning point'};
+    response.send(respuesta)
 }
 
 function getBook(request, response){
@@ -23,6 +24,7 @@ function postBook(request, response){
     console.log(request.body)
     if (book === null){
         book = new Book(request.body.title,
+                        request.body.type,
                         request.body.author,
                         request.body.price,
                         request.body.photo,
