@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pokemon.css">
+    <title>Proyecto Pokemon</title>
+</head>
+
+<body>
+    <div id="page">
+        <div id="header"><img src="International_Pokémon_logo.png" alt="logopokemon" width="190" height="60">
+        </div>
+
+    </div>
+
+    <div class="background">
+        <div class="containerFormCard">
+            <form class="form">
+                <ul class="wrapper">
+                    <li style="--i:4;"><input class="input" id="name" name="Name" type="text" placeholder="Name"
+                            required=""></li>
+                    <button type="button" onclick="getPokemon()" style="--i:1;">Try your powers!</button>
+                </ul>
+            </form>
+            <div id="containerCard">
+                <div id="pokemonName"></div>
+                <div id="pokemonImage" ></div>
+                <div id="pokemonAbilities">
+                    <table id="abilitiesTable"></table>
+                </div>
+
+            </div>
+        </div>
+        <script src="pokemon.js"></script>
+    </div>
+</body>
+
+</html>
